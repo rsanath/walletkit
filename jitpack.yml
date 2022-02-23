@@ -7,4 +7,5 @@ before_install:
 install:
    - echo "Running a custom install command"
    - ./gradlew assembleRelease
-   - cp WalletKitBRD-Android/build/outputs/aar/WalletKitBRD-Android-release.aar ~/.m2/repository/
+   - ./gradlew build -x test publishToMavenLocal 
+

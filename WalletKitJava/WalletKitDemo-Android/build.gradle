@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 apply from: '../gradle/copy-test-config.gradle'
+apply plugin: 'maven-publish'
+
+group = 'com.github.rsanath'
 
 android {
     compileSdkVersion androidConfig.compileSdkVersion
