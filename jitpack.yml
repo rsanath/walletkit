@@ -7,5 +7,4 @@ before_install:
    - cd WalletKitJava
 install:
    - echo "Running a custom install command"
-   - ./gradlew assembleRelease
-   - ./gradlew build -x test publishToMavenLocal 
+   - ./gradlew assembleRelease -xtest publishToMavenLocal 
