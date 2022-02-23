@@ -1,6 +1,7 @@
 jdk:
-  - openjdk9
+  - openjdk8
 before_install:
+   - yes | sdkmanager "cmake;3.18.1"
    - sdk install java 11.0.10-open
    - sdk use java 11.0.10-open
    - cd WalletKitJava
@@ -8,4 +9,3 @@ install:
    - echo "Running a custom install command"
    - ./gradlew assembleRelease
    - ./gradlew build -x test publishToMavenLocal 
-
